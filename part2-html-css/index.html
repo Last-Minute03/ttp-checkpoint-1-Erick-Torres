@@ -17,18 +17,18 @@
   CHECKLIST
   ----------------------------------------------------------------
 
-  [ ] TASK 1 — Page structure
+  [X] TASK 1 — Page structure
       Write a complete, valid HTML5 page from scratch.
       It must have a document type declaration, an html element,
       a head with a title tag, and a body.
 
-  [ ] TASK 2 — Link the stylesheet
+  [X] TASK 2 — Link the stylesheet
       Inside the head, link look.css to this page.
 
       EXPLAIN (write your answer as a comment near your link tag):
         Why does the link to a stylesheet go in the head and not the body?
 
-  [ ] TASK 3 — Page content
+  [X] TASK 3 — Page content
       Add ALL of the following elements inside the body:
         - An h1 with the text "My Checkpoint Page"
         - A paragraph with at least two sentences — give it an id of "intro"
@@ -44,7 +44,7 @@
         Can two elements on the same page share the same class?
         Can two elements on the same page share the same id?
 
-  [ ] TASK 4 — Specificity (answer here, styles go in look.css)
+  [X] TASK 4 — Specificity (answer here, styles go in look.css)
 
         Look at these two CSS rules:
 
@@ -54,10 +54,33 @@
         Both rules target the same paragraph.
         Which color will the paragraph actually be? Why does one rule win?
 
-        Answer:
+        Answer: In css there exists these LEVELS of IMPORTANCE when changing attributes of the elements. 
+                Depending on wether its an id or a class or base element, some can override others changes
 
 -->
 
 <!-- ============================================================ -->
 <!-- Write your complete HTML page starting below this line      -->
 <!-- ============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="look.css"/> <!-- Im not sure why it goes into the head, if i were to take a guess its cause itll load first since its at the top -->
+    <title>PART 2 CHECKPOINT 1</title>
+  </head>
+  <body>
+    <h1>My Check Point Page</h1>
+    <p id="intro">I finished part 1 not too long ago and it was educational to a certain degree. It was nice racking at my brain to figure out and remember concepts so that I could finish part 1</p>
+    <h2 id="section-title">How it all came to be</h2>
+    <ul>
+      <li class="highlight"></li>
+      <li></li>                     <!-- multiple elements sharing a class tag, but there can only be one element with its specefic id tag -->
+      <li class="highlight"></li>
+      <li></li>
+    </ul>
+    <div id="box"> Short Story Time: The End</div>
+    <button id="click-me"> Click Me </button>
+  </body>
+</html>

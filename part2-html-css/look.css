@@ -13,12 +13,19 @@
   Using the body TAG selector, set a background color on the page.
 */
 
+body{
+  background-image: linear-gradient(to right,green,orange,yellow); /* used this is a previous assingment but i can change to color if needed */
+}
 
 /*
   TASK B
   Using the h1 TAG selector, set a font size and a color.
 */
 
+h1 {
+  font-size:3rem;
+  color:red;
+}
 
 /*
   TASK C
@@ -26,6 +33,10 @@
   Give them a background color and some padding so they stand out.
 */
 
+.highlight{
+  background-color:yellowgreen;
+  padding: 1.2rem 1.2rem;
+}
 
 /*
   TASK D
@@ -33,6 +44,9 @@
   different from the h1 and different from body text.
 */
 
+#section-title{
+  color:white;
+}
 
 /*
   TASK E
@@ -47,9 +61,20 @@
            Write your answer as a comment below this rule.
 
 
-           answer:
+           answer: both are spacing but on different layers. If you check on F12 the the bottom of style you see
+           a box with square areas highlighted, which are the base then padding, then border, then margin i believe is the order off the top of my head 
 */
 
+#box{
+  width: 50vw;
+  max-width:100%;
+  max-height:100%;
+  height:10vh;
+  border: 10px solid orangered; /* the border that seperates the padding and margin */
+  border-style:groove;
+  padding: 1.3rem 1.5rem;  /* inner layer inside border but outside base */
+  margin: 20px 30px;       /* outer most layer */
+}
 
 /*
   TASK F
@@ -58,6 +83,18 @@
   and a cursor: pointer that turns into a pointer when the user hovers over it.
 */
 
+#click-me{
+  background-image: linear-gradient( 52deg ,lime,  maroon); /* used this is a previous assingment but i can change to color if needed */
+  color: aliceblue;
+  font-weight:bold;
+  border: 2px solid black;
+  padding: 0.05rem 0.4rem;
+  border-radius: 20px;
+}
+
+#click-me:hover{
+  cursor:pointer;
+}
 
 /*
   TASK G — Specificity
@@ -72,5 +109,22 @@
            What is CSS specificity and how does it determine which rule wins?
            Write your answer as a comment below these two rules.
 
-           answer:
+           answer: although css is cascading so one after the other, when it comes to the tags there are levels or orders of importance
+           using a regular tag for the element is the lowest, so compared to using the id selector. Althoough both change the same thing
+           the id selector wins becuase its higher on the food chain. There is something called !important that can be used on specefic values you want to 
+           override over the food chain of tags
+
+
 */
+
+p{
+
+color:violet;
+
+}
+
+#intro {
+
+color:aliceblue;
+
+}
