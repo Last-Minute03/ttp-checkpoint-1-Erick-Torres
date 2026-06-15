@@ -351,7 +351,7 @@ console.log(roster[2].name)
 
 roster.forEach((x)=>
   {
-        console.log(x["name"])
+        console.log(x["name"]) //didnt do for present students whoops
   }
 );
 
